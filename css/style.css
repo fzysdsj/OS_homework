@@ -1,0 +1,151 @@
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+/*		height: 1600px;*/
+	    background-color: #F7F7F7;
+	}
+	h1 {
+		font-family: "楷体";
+		color: rgba(152,30,10,1);
+		text-align: center;
+	}
+	h3 {
+		text-align: center;
+		color: rgba(60,60,126,1);
+	}
+	.caozuo {
+		width: 100%;
+		background: #fff;
+		box-shadow: 4px 2px 6px #666
+		}
+	.caozuo h2 {
+		font: 600 20px/30px "华文行楷";
+		background: #ccc;
+		margin-bottom: 30px;
+		text-align: center;
+		text-shadow: rgba(152,60,200,.5);
+	}
+	.caozuo:after {
+			content: '';/*必填项*/
+			clear: both;
+			display: block;
+		}
+		.caozuo .OS{
+		width: 210px;
+		height: 210px;
+		margin: 0 30px 30px 0;
+		display: flex;
+		position: relative;
+		background-color: rgba(51,125,200,1);
+		cursor: pointer;
+		box-shadow: 2px 2px 5px #CCC;
+	}
+	.caozuo #youxian {
+	   float: left;
+	}
+	.caozuo #lunzhuan {
+		float: right;
+		background: rgba(155,55,55,.8);
+	}
+	.caozuo #kongxian{
+		margin: auto;
+		background: rgba(160,79,169,.8);
+	}
+	#one,#two {
+		display:  none;
+	}
+	.caozuo .OS:after {
+		content: attr(data-brief);
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		line-height: 210px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #FFF;
+		font-family: '微软雅黑';
+		font-size: 18px;
+		background-color: rgba(170, 170, 170, 0);
+		z-index: -1	;
+		transition: all 0.3s ease-in;
+	}
+	.caozuo .OS:hover:after {
+		background-color: rgba(170, 170, 170, 0.6);
+		z-index: 100;
+	}
+	.display {
+		display:  none;
+	}
+	div.program {
+	 width: 100%;
+	 text-align: center;
+	}
+	.select {
+		width: 100%;
+		box-shadow:  6px 6px 10px #888;
+		margin: 30px auto;
+		text-align: center;
+	}
+	.select h4 {
+		color: black;
+		text-shadow:  4px 4px 10px #ccc;
+		cursor: pointer;
+	}
+	.select ul {
+		list-style:  none;
+	}
+	.select ul li {
+		font: 600 20px/50px "kaiti";
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+	.select ul li:nth-child(1) {
+		background-color: rgba(51,125,200,1);
+
+	}
+	.select ul li:nth-child(1):hover{
+		background:rgba(155,55,55,.8) ;
+		color:white;
+	}
+	.select ul li:nth-child(2) {
+		background: rgba(160,79,169,.8) ;
+	}
+	.select ul li:nth-child(2):hover{
+		background: rgba(155,55,55,.8);
+		color:white;
+	}
+	.information {
+		text-align: center;
+		display: none;
+	}
+	h5 {
+		color: green;
+		display: none;
+	}
+	#btn1,#btn2,#btn3 {
+		cursor : pointer;
+		opacity: 0.9;
+	}
+	#backtop {
+		text-decoration: none;
+		font: 40px/40px "kaiti";
+		position: fixed;
+		right: 0;
+		bottom: 0
+	}
+	#yssf,#lzsf {
+		white-space: pre;
+	}
+	#two #firstFit {
+		float: left;
+	}
+	#two #bestFit {
+		float: right;
+		background: rgb( 30, 120, 120);
+	}

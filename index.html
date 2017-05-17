@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>os操作系统</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	  </head>
+<!--   <h1>操作系统上机实验</h1>
+  <h3>杜维杰    20142965   信1401-2</h3> -->
+<body>
+    <div class="select">
+      <h4 id="title">欢迎使用本网页，请选择您要进行验证的算法</h4>
+      <ul>
+      	<li>进程调度模拟算法</li>
+      	<li>存储管理动态分区分配及回收算法</li>
+      </ul>
+      </div>
+    <div class="li1">
+    	<div class = "information" id="inf">
+    		<h4 id="titleinf">请输入您要录入进程数及第一个进程信息：</h4>
+            <div>
+            <label for="">进程数： </label>
+            <input type="text"  id = "number" placeholder="请您选择要录入进程的数量">
+            </div><span id="yanzhengnumber"></span>
+            <div >
+    		<div>
+    		<label for="">进程名： </label>
+    		<input type="text"  id = "name" placeholder="请输入一个进程名">
+    		</div><span id="yanzheng"></span>
+    		<div >
+    		<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEEDTIME： </label>
+    		<input type="text" id = "needtime" placeholder="请输入进程完成需要时间">
+            <span style="color:#aaa;">（时间片）</span>
+    		</div>
+    		<span id="yanzhengtime"></span>
+    		<div >
+    		<a href="#h5"><button  id="btn1" class="btn btn-primary" disabled = "disabled">录入进程</button></a>
+            <button  id="btn2" class="btn btn-warning">重置</button>
+    		<button  id="btn3" class="btn btn-danger">重新输入全部进程</button>
+    		<h5 id="h5">👌&nbsp;全部录入成功！请点击下方方块选择调度算法</h5>
+    		</div>
+    	</div>
+    	<div class="caozuo" id = "one">
+    		<h2 >实验一 进程调度模拟算法</h2>
+    		<a href="#one"><div class="OS col-md-6 col-sm-12 col-xs-12 " id="youxian" data-brief= "优先数调度算法程序" title="点击执行此算法"></div></a>
+    		<a href="#one"><div class="OS col-md-6 col-sm-12 col-xs-12" id="lunzhuan" data-brief= "循环轮转调度算法程序" title="点击执行此算法"></div></a>
+    	</div>
+    	<div class = "caozuo display program"  id = "yxxs">
+    		<h2>优先数调度算法程序</h2>
+            <span>执行：🏃 等待：🐂 完成：🚥 </span>
+            <div id="yxsf"></div>
+    	</div>
+    	<div class = "caozuo display program"  id = "lzxs">
+    		<h2>循环轮转调度算法程序</h2>
+            <span>执行：🏃 等待：🐂 完成：🚥 </span>
+            <div id="lzsf"></div>
+    		</div>
+    		</div>
+            </div>
+    	<div class="li2">
+    	<div class="caozuo" id="two">
+    		<h2>实验二 存储管理动态分区分配及回收算法</h2>
+    		<div class="OS" id="firstFit" data-brief= "首次适应算法" title="点击执行此算法"></div>
+            <div class="OS" id="bestFit" data-brief= "最佳适应算法" title="点击执行此算法"></div></div>
+    		<div class = "caozuo display program"  id = "scsy">
+    		<h2>首次适应算法</h2>
+            <h3>请选择要进行的操作：</h3>
+            <span class = "btn btn-primary col-md-6" id = "scfenpei">分配</span>
+            <span class = "btn btn-warning col-md-6" id = "schuishou">回收</span>
+            <div id="scsyfp" class = "col-md-12" style = "display: none;">
+                <div>请输入要分配分区大小：<input type="text" name="fp" id = "int" placeholder = "0~32767(正整数)">
+                <button class = "btn btn-warning" id = "result">点击进行运算</button></div>
+
+
+            </div>
+            <div id="scsyhs" class = "col-md-12" style = "display: none;">
+                <div>
+                <div><span>请输入要回收分区首址：<input type="text" name="hs" id = "intHs" placeholder="0~32767(正整数)"></span></div>
+                <div><span>请输入要回收分区大小：<input type="text" name="hs" id = "lengthHs" placeholder = "0~32767(正整数)"></span></div>
+                <button class = "btn btn-warning" id = "resultHs">点击进行运算</button></div>
+            </div>  
+    	</div>
+            <div class = "caozuo display program"  id = "zjsy">
+            <h2>最佳适应算法</h2>
+            <h3>请选择要进行的操作：</h3>
+            <span class = "btn btn-primary col-md-6" id = "zjfenpei">分配</span>
+            <span class = "btn btn-warning col-md-6" id = "zjhuishou">回收</span>
+            <div id="zjsyfp" class = "col-md-12" style = "display: none;">
+                <div>请输入要分配分区大小：<input type="text" name="fp" id = "zj_intFp"  placeholder = "0~32767(正整数)">
+                <button class = "btn btn-warning" id = "zj_result">点击进行运算</button>
+                </div>
+                </div>
+            <div id="zjsyhs" class = "col-md-12" style = "display: none;">
+                <div>
+                <div><span>请输入要回收分区首址：<input type="text" name="hs" id = "zj_intHS"  placeholder = "0~32767(正整数)"></span></div>
+                <div><span>请输入要回收分区大小：<input type="text" name="hs" id = "zj_lengthHs"  placeholder = "0~32767(正整数)"></span></div>
+                <button class = "btn btn-warning" id = "zj_resultHs">点击进行运算</button></div>
+            </div>
+
+        <!--    <div class="OS" id="lunzhuan" data-brief= "循环轮转调度算法程序"></div> -->
+        </div>
+    	</div>
+    	<a href="#" title="点我返回顶部" id="backtop"><span>🚀</span></a>
+</body>
+<script type="text/javascript" src="js/style.js"></script>
+</html>
